@@ -1,0 +1,34 @@
+﻿<Window x:Class="hegyekWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:hegyekWPF"
+        mc:Ignorable="d"
+        Title="hegyekWPF" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <DataGrid x:Name="datagrid" Grid.Column="0" Margin="10"/>
+
+        <StackPanel Orientation="Vertical" Grid.Column="1" Margin="20">
+            <StackPanel Height="40" Orientation="Horizontal">
+                <Label Width="80" Height="30">Név:</Label>
+                <TextBox x:Name="nev" Width="150" Height="20"></TextBox>
+            </StackPanel>
+            <StackPanel Height="40" Orientation="Horizontal">
+                <Label Width="80" Height="30">Hegység:</Label>
+                <TextBox x:Name="hegyseg" Width="150" Height="20"></TextBox>
+            </StackPanel>
+            <StackPanel Height="40" Orientation="Horizontal">
+                <Label Width="80" Height="30">Magasság:</Label>
+                <TextBox x:Name="magassag" Width="150" Height="20"></TextBox>
+            </StackPanel>
+            <Button Width="70" Height="20" Margin="0 10" Click="Hozzaad">Hozzáad</Button>
+            <Button Width="70" Height="20" Margin="0 10" Click="Mentes">Mentés</Button>
+        </StackPanel>
+    </Grid>
+</Window>
