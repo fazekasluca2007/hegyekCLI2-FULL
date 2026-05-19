@@ -1,0 +1,42 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using HegyekCLI2;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace HegyekCLI2.Tests
+{
+    [TestClass()]
+    public class ProgramTests
+    {
+        [TestMethod()]
+        public void tartalmazTest1()
+        {
+            //Bükk; Fodor-hegy; Bükk-vidék=>true
+            bool elvart = true;
+            bool eredmeny = Program.tartalmaz("Fodor-hegy", "Bükk-vidék","Bükk");
+            Assert.AreEqual(elvart, eredmeny);
+        }
+        [TestMethod()]
+        public void tartalmazTest2()
+        {
+            //kő; Füstös-kő-bérc; Bükk-vidék; =>true
+
+            bool elvart = true;
+            bool eredmeny = Program.tartalmaz("Füstös-kő-bérc", "Bükk-vidék", "kő");
+            Assert.AreEqual(elvart, eredmeny);
+        }
+        [TestMethod()]
+        public void tartalmazTest3()
+        {
+            //Bükk; Írott-kő; Kőszegi-hegység; =>false
+
+            bool elvart = false;
+            bool eredmeny = Program.tartalmaz("Írott-kő", "Kőszegi-hegység", "Bükk");
+            Assert.AreEqual(elvart, eredmeny);
+        }
+
+    }
+}
