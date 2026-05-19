@@ -7,3 +7,5 @@ Asztali https://github.com/k0csisrobert/sablonAszt https://github.com/SzedlakKri
 Egybe Minden https://github.com/Bia262/vg-shi https://github.com/MakkaiK
 
 https://github.com/deakcsabakkszki https://github.com/sullaspqr https://github.com/FZoltan40
+
+Patrik https://github.com/TrencsanszkyPatrik
